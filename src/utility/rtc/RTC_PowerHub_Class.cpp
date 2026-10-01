@@ -92,7 +92,7 @@ namespace m5
   int RTC_PowerHub_Class::setAlarmIRQ(const rtc_date_t *date, const rtc_time_t *time)
   {
 
-    std::uint8_t buf[3];
+    std::uint8_t buf[3] = {0, 0, 0};
     bool irq_enable = false;
 
     if (time) {
